@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postualar a FUAS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="regionciudad.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">   
+
+    <script>
+    $(function(){
+        $("#btn").on("click", function(){
+            $("#formulario_registro").validate({
+                rules:
+                {
+                    
+                    nombre: {
+                        required: true,
+                        minlength: 8
+                    },
+                    Rut: {
+                        required: true,
+                        minlength: 8,
+                        maxlength: 10
+                    },
+                   
+               
+        
+                    Actividad: {
+                        required: true,
+                        minlength: 1,
+                        maxlength: 30
+                    },
+                    
+                
+                   
+                    Nem: {
+                        required: true,
+                        number: true,
+                        minlength: 2,
+                        maxlength: 2
+                    },
+        
+                    Institucion: {
+                        required: true
+                    },
+        
+                    UltimaMatri: {
+                        required: true,
+                        number: true,
+                        minlength: 4,
+                        maxlength: 4
+                    },
+        
+                    Direccion: {
+                        required: true,
+                        minlength: 1
+                    },
+        
+                    Numero: {
+                        required: true,
+                        number: true,
+                        minlength: 1,
+                        maxlength: 6
+                    },
+
+                    ciudad: {
+                        required: true
+                    },
+                    exampleCheck1:{
+                        required: true
+                    }
+
+                },
+
+            });
+        } );
+
+    });
+    </script>
+
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <img src="https://www.daemcoelemu.cl/wp-content/uploads/2018/06/mineduc.jpg" width="130px" height="110px"
+            alt="">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">¿Que es FUAS?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="postular.html">Postular</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <div class="container registroform">
+        <form action="" method="POST" name="formulario_registro" id="formulario_registro" class="bord">
+            <div id="in" class="text-center tituloform">Formulario Único de Acreditación Socioeconómica</div>
+            <hr>
+            <div class="form-group a">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" name="nombre" id="nombre"
+                    placeholder="Ponga su nombre completo">
+
+            </div>
+            <div class="form-group">
+                <label for="Rut">Rut</label>
+                <input type="text" class="input-rut form-control" name="Rut" id="Rut" placeholder="00.000.000-0">
+            </div>
+
+            <hr>
+
+            <h1>Datos del alumno</h1>
+
+            <hr>
+
+
+            <div class="form-group">
+                <label for="EstadoCivil">Estado Civil</label>
+                <select class="form-control" id="EstadoCivil">
+                    <option>--Seleccionar--</option>
+                    <option value="Soltero">Soltero</option>
+                    <option value="Casado">Casado</option>
+                    <option value="Viudo">Viudo</option>
+                    <option value="Divorciado">Divorciado</option>
+                </select>
+            </div>
+            <div class="form-group">
+
+                <label for="Nacionalidad">Nacionalidad</label>
+                <br>
+
+                <div class="form-check-inline">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="Chilena" value="option1"
+                        checked>
+                    <label class="form-check-label" for="exampleRadios1">
+                        Chilena
+                    </label>
+                </div>
+                <div class="form-check-inline">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="ExtPermDef" value="option2">
+                    <label class="form-check-label" for="exampleRadios2">
+                        Extranjera con permanencia definitiva
+                    </label>
+                </div>
+                <div class="form-check-inline">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="ExtRes" value="option2">
+                    <label class="form-check-label" for="exampleRadios2">
+                        Extranjero con residencia
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="Actividad">Actividad</label>
+                <input type="text" class="form-control" id="Actividad" name="Actividad" placeholder="Ingrese su actividad actual">
+            </div>
+
+            <div class="form-group">
+
+                <label for="EscolarExt">¿Cursaste los ultimos 2 años de ensenanza escolar en el extranjero?</label>
+                <br>
+
+                <div class="form-check-inline">
+                    <input class="form-check-input" type="radio" name="EscolarExt" id="escolarsi" value="option1"
+                        checked>
+                    <label class="form-check-label" for="EscolarExt">
+                        Si
+                    </label>
+                </div>
+                <div class="form-check-inline">
+                    <input class="form-check-input" type="radio" name="EscolarExt" id="escolarno" value="option2">
+                    <label class="form-check-label" for="EscolarExt">
+                        No
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+
+                <label for="Discapacidad">¿Posee alguna discapacidad?</label>
+                <br>
+
+                <div class="form-check-inline">
+                    <input class="form-check-input" type="radio" name="Discapacidad" id="discasi" value="option1"
+                        checked>
+                    <label class="form-check-label" for="Discapacidad">
+                        Si
+                    </label>
+                </div>
+                <div class="form-check-inline">
+                    <input class="form-check-input" type="radio" name="Discapacidad" id="discano" value="option2">
+                    <label class="form-check-label" for="Discapacidad">
+                        No
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="PuebloOrigin">¿A que pueblo originario perteneces?</label>
+                <select class="form-control" id="PuebloOrigin">
+                    <option>--Seleccionar--</option>
+                    <option value="Ninguno">Ninguno</option>
+                    <option value="Picunche">Picunche</option>
+                    <option value="Mapuche">Mapuche</option>
+                    <option value="Huilliche">Huilliche</option>
+                    <option value="RapaNui">RapaNui</option>
+                    <option value="Diaguitas">Diaguitas</option>
+                    <option value="Atacamenos">Atacamenos</option>
+                    <option value="Caucahues">Caucahues</option>
+                </select>
+            </div>
+            <div class="form-group">
+
+                <div class="form-group">
+
+                    <label for="Ahorro">¿Cuenta de ahorro para estudios en Educacion superior?</label>
+                    <br>
+
+                    <div class="form-check-inline">
+                        <input class="form-check-input" type="radio" name="Ahorro" id="ahorrosi" value="option1"
+                            checked>
+                        <label class="form-check-label" for="Ahorro">
+                            Si
+                        </label>
+                    </div>
+                    <div class="form-check-inline">
+                        <input class="form-check-input" type="radio" name="Ahorro" id="ahorrono" value="option2">
+                        <label class="form-check-label" for="Ahorro">
+                            No
+                        </label>
+                    </div>
+                </div>
+
+                <hr>
+
+                <h1>Antecendentes Academicos</h1>
+
+                <hr>
+
+                <div class="form-group">
+                    <label for="Nem">Promedio NEM</label>
+                    <input type="text" class="form-control" id="Nem" name="Nem" placeholder="Promedio Nem">
+                </div>
+                <div class="form-group">
+                    <label for="Institucion">Institucion de Educacion superior donde te encuentras estudiando</label>
+                    <input type="text" class="form-control" id="Institucion" name="Institucion" placeholder="Ingresar Institucion">
+                </div>
+                <div class="form-group">
+                    <label for="UltimaMatri">Ultimo año de matricula en Institucion de Educacion superior
+                    </label>
+                    <input type="text" class="form-control" id="UltimaMatri" name="UltimaMatri"
+                        placeholder="Ingresar año de ultima matricula">
+                </div>
+
+                <hr>
+
+
+
+
+
+
+
+
+
+                <table class="table table-sm tablafamilia">
+                    <h1>Integrantes del grupo familiar</h1>
+
+                    <hr>
+                    <thead>
+                        <tr>
+                            <th scope="col">Nombres</th>
+                            <th scope="col">Apellido Paterno</th>
+                            <th scope="col">Apellido Materno</th>
+                            <th scope="col">Rut</th>
+                            <th scope="col">Edad</th>
+                            <th scope="col">Estado Civil</th>
+                            <th scope="col">Parentesco</th>
+                            <th scope="col">Prevision</th>
+                            <th scope="col">Prevision Salud</th>
+                            <th scope="col">Actividad</th>
+                            <th scope="col">Nivel De Estudios</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="famnom1"></td>
+                            <td><input type="text" class="form-control" id="famapp1"></td>
+                            <td><input type="text" class="form-control" id="famapm1"></td>
+                            <td><input type="text" class="form-control" id="famrut1"></td>
+                            <td><input type="text" class="form-control" id="famedad1"></td>
+                            <td><input type="text" class="form-control" id="famestcivil1"></td>
+                            <td><input type="text" class="form-control" id="famparent1"></td>
+                            <td><input type="text" class="form-control" id="famprevi1"></td>
+                            <td><input type="text" class="form-control" id="famprevisalud1"></td>
+                            <td><input type="text" class="form-control" id="famactiv1"></td>
+                            <td><input type="text" class="form-control" id="famestudios1"></td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="text" class="form-control" id="famnom2"></td>
+                            <td><input type="text" class="form-control" id="famapp2"></td>
+                            <td><input type="text" class="form-control" id="famapm2"></td>
+                            <td><input type="text" class="form-control" id="famrut2"></td>
+                            <td><input type="text" class="form-control" id="famedad2"></td>
+                            <td><input type="text" class="form-control" id="famestcivil2"></td>
+                            <td><input type="text" class="form-control" id="famparent2"></td>
+                            <td><input type="text" class="form-control" id="famprevi2"></td>
+                            <td><input type="text" class="form-control" id="famprevisalud2"></td>
+                            <td><input type="text" class="form-control" id="famactiv2"></td>
+                            <td><input type="text" class="form-control" id="famestudios2"></td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="text" class="form-control" id="famnom3"></td>
+                            <td><input type="text" class="form-control" id="famapp3"></td>
+                            <td><input type="text" class="form-control" id="famapm3"></td>
+                            <td><input type="text" class="form-control" id="famrut3"></td>
+                            <td><input type="text" class="form-control" id="famedad3"></td>
+                            <td><input type="text" class="form-control" id="famestcivil3"></td>
+                            <td><input type="text" class="form-control" id="famparent3"></td>
+                            <td><input type="text" class="form-control" id="famprevi3"></td>
+                            <td><input type="text" class="form-control" id="famprevisalud3"></td>
+                            <td><input type="text" class="form-control" id="famactiv3"></td>
+                            <td><input type="text" class="form-control" id="famestudios3"></td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="text" class="form-control" id="famnom4"></td>
+                            <td><input type="text" class="form-control" id="famapp4"></td>
+                            <td><input type="text" class="form-control" id="famapm4"></td>
+                            <td><input type="text" class="form-control" id="famrut4"></td>
+                            <td><input type="text" class="form-control" id="famedad4"></td>
+                            <td><input type="text" class="form-control" id="famestcivil4"></td>
+                            <td><input type="text" class="form-control" id="famparent4"></td>
+                            <td><input type="text" class="form-control" id="famprevi4"></td>
+                            <td><input type="text" class="form-control" id="famprevisalud4"></td>
+                            <td><input type="text" class="form-control" id="famactiv4"></td>
+                            <td><input type="text" class="form-control" id="famestudios4"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <hr>
+
+                <h1>Direccion del grupo familiar</h1>
+
+                <hr>
+
+                <div class="form-group">
+                    <label for="Direccion">Direccion</label>
+                    <input type="text" class="form-control" id="Direccion" name="Direccion" placeholder="Ingresar Direccion">
+                </div>
+                <div class="form-group">
+                    <label for="Numero">Numero</label>
+                    <input type="text" class="form-control" id="Numero" name="Numero"   placeholder="Ingresar Numero">
+                </div>
+                <div class="form-group">
+                    <label for="Depto">Departamento</label>
+                    <input type="text" class="form-control" id="Depto" placeholder="Ingresar Departamento">
+                </div>
+                <div class="form-group">
+                    <label for="Pobla">Poblacion o Villa </label>
+                    <input type="text" class="form-control" id="Pobla" placeholder="Ingresar Poblacion o Villa">
+                </div>
+                <div class="form-group">
+                    <label for="Region">Region</label>
+                    <br>
+                    <select class="form-control" id="regiones">
+                        <option>Seleccione región</option>
+                        <option>--</option>
+                        <option value="Arica y Parinacota">Arica y Parinacota</option>
+                        <option value="Tarapacá">Tarapacá</option>
+                        <option value="Antofagasta">Antofagasta</option>
+                        <option value="Atacama">Atacama</option>
+                        <option value="Coquimbo">Coquimbo</option>
+                        <option value="Valparaíso">Valparaíso</option>
+                        <option value="Región del Libertador Gral. Bernardo O’Higgins">Región del Libertador Gral.
+                            Bernardo O’Higgins</option>
+                        <option value="Región del Maule">Región del Maule</option>
+                        <option value="Región del Biobío">Región del Biobío</option>
+                        <option value="Región de la Araucanía">Región de la Araucanía</option>
+                        <option value="Región de Los Ríos">Región de Los Ríos</option>
+                        <option value="Región de Los Lagos">Región de Los Lagos</option>
+                        <option value="Región Aisén del Gral. Carlos Ibáñez del Campo">Región Aisén del Gral. Carlos
+                            Ibáñez del Campo</option>
+                        <option value="Región de Magallanes y de la AntárVca Chilena">Región de Magallanes y de la
+                            AntárVca Chilena</option>
+                        <option value="Región Metropolitana de Santiago">Región Metropolitana de Santiago</option>
+                    </select>
+
+                </div>
+                <div class="form-group">
+                    <label for="Comuna">Comuna</label>
+                    <br>
+                    <select class="form-control" id="comunas">
+                        <option>Seleccione comuna</option>
+                        <option>--</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="Ciudad">Ciudad</label>
+                    <input type="text" class="form-control" id="Ciudad" placeholder="Ingresar Ciudad">
+                </div>
+
+                <script
+                    src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-8216c69d01441f36c0ea791ae2d4469f0f8ff5326f00ae2d00e4bb7d20e24edb.js"></script>
+
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+                <script id="rendered-js">
+                    var RegionesYcomunas = {
+
+                        "regiones": [{
+                            "NombreRegion": "Arica y Parinacota",
+                            "comunas": ["Arica", "Camarones", "Putre", "General Lagos"]
+                        },
+
+                        {
+                            "NombreRegion": "Tarapacá",
+                            "comunas": ["Iquique", "Alto Hospicio", "Pozo Almonte", "Camiña", "Colchane", "Huara", "Pica"]
+                        },
+
+                        {
+                            "NombreRegion": "Antofagasta",
+                            "comunas": ["Antofagasta", "Mejillones", "Sierra Gorda", "Taltal", "Calama", "Ollagüe", "San Pedro de Atacama", "Tocopilla", "María Elena"]
+                        },
+
+                        {
+                            "NombreRegion": "Atacama",
+                            "comunas": ["Copiapó", "Caldera", "Tierra Amarilla", "Chañaral", "Diego de Almagro", "Vallenar", "Alto del Carmen", "Freirina", "Huasco"]
+                        },
+
+                        {
+                            "NombreRegion": "Coquimbo",
+                            "comunas": ["La Serena", "Coquimbo", "Andacollo", "La Higuera", "Paiguano", "Vicuña", "Illapel", "Canela", "Los Vilos", "Salamanca", "Ovalle", "Combarbalá", "Monte Patria", "Punitaqui", "Río Hurtado"]
+                        },
+
+                        {
+                            "NombreRegion": "Valparaíso",
+                            "comunas": ["Valparaíso", "Casablanca", "Concón", "Juan Fernández", "Puchuncaví", "Quintero", "Viña del Mar", "Isla de Pascua", "Los Andes", "Calle Larga", "Rinconada", "San Esteban", "La Ligua", "Cabildo", "Papudo", "Petorca", "Zapallar", "Quillota", "Calera", "Hijuelas", "La Cruz", "Nogales", "San Antonio", "Algarrobo", "Cartagena", "El Quisco", "El Tabo", "Santo Domingo", "San Felipe", "Catemu", "Llaillay", "Panquehue", "Putaendo", "Santa María", "Quilpué", "Limache", "Olmué", "Villa Alemana"]
+                        },
+
+                        {
+                            "NombreRegion": "Región del Libertador Gral. Bernardo O’Higgins",
+                            "comunas": ["Rancagua", "Codegua", "Coinco", "Coltauco", "Doñihue", "Graneros", "Las Cabras", "Machalí", "Malloa", "Mostazal", "Olivar", "Peumo", "Pichidegua", "Quinta de Tilcoco", "Rengo", "Requínoa", "San Vicente", "Pichilemu", "La Estrella", "Litueche", "Marchihue", "Navidad", "Paredones", "San Fernando", "Chépica", "Chimbarongo", "Lolol", "Nancagua", "Palmilla", "Peralillo", "Placilla", "Pumanque", "Santa Cruz"]
+                        },
+
+                        {
+                            "NombreRegion": "Región del Maule",
+                            "comunas": ["Talca", "ConsVtución", "Curepto", "Empedrado", "Maule", "Pelarco", "Pencahue", "Río Claro", "San Clemente", "San Rafael", "Cauquenes", "Chanco", "Pelluhue", "Curicó", "Hualañé", "Licantén", "Molina", "Rauco", "Romeral", "Sagrada Familia", "Teno", "Vichuquén", "Linares", "Colbún", "Longaví", "Parral", "ReVro", "San Javier", "Villa Alegre", "Yerbas Buenas"]
+                        },
+
+                        {
+                            "NombreRegion": "Región del Biobío",
+                            "comunas": ["Concepción", "Coronel", "Chiguayante", "Florida", "Hualqui", "Lota", "Penco", "San Pedro de la Paz", "Santa Juana", "Talcahuano", "Tomé", "Hualpén", "Lebu", "Arauco", "Cañete", "Contulmo", "Curanilahue", "Los Álamos", "Tirúa", "Los Ángeles", "Antuco", "Cabrero", "Laja", "Mulchén", "Nacimiento", "Negrete", "Quilaco", "Quilleco", "San Rosendo", "Santa Bárbara", "Tucapel", "Yumbel", "Alto Biobío", "Chillán", "Bulnes", "Cobquecura", "Coelemu", "Coihueco", "Chillán Viejo", "El Carmen", "Ninhue", "Ñiquén", "Pemuco", "Pinto", "Portezuelo", "Quillón", "Quirihue", "Ránquil", "San Carlos", "San Fabián", "San Ignacio", "San Nicolás", "Treguaco", "Yungay"]
+                        },
+
+                        {
+                            "NombreRegion": "Región de la Araucanía",
+                            "comunas": ["Temuco", "Carahue", "Cunco", "Curarrehue", "Freire", "Galvarino", "Gorbea", "Lautaro", "Loncoche", "Melipeuco", "Nueva Imperial", "Padre las Casas", "Perquenco", "Pitrufquén", "Pucón", "Saavedra", "Teodoro Schmidt", "Toltén", "Vilcún", "Villarrica", "Cholchol", "Angol", "Collipulli", "Curacautín", "Ercilla", "Lonquimay", "Los Sauces", "Lumaco", "Purén", "Renaico", "Traiguén", "Victoria"]
+                        },
+
+                        {
+                            "NombreRegion": "Región de Los Ríos",
+                            "comunas": ["Valdivia", "Corral", "Lanco", "Los Lagos", "Máfil", "Mariquina", "Paillaco", "Panguipulli", "La Unión", "Futrono", "Lago Ranco", "Río Bueno"]
+                        },
+
+                        {
+                            "NombreRegion": "Región de Los Lagos",
+                            "comunas": ["Puerto Montt", "Calbuco", "Cochamó", "Fresia", "FruVllar", "Los Muermos", "Llanquihue", "Maullín", "Puerto Varas", "Castro", "Ancud", "Chonchi", "Curaco de Vélez", "Dalcahue", "Puqueldón", "Queilén", "Quellón", "Quemchi", "Quinchao", "Osorno", "Puerto Octay", "Purranque", "Puyehue", "Río Negro", "San Juan de la Costa", "San Pablo", "Chaitén", "Futaleufú", "Hualaihué", "Palena"]
+                        },
+
+                        {
+                            "NombreRegion": "Región Aisén del Gral. Carlos Ibáñez del Campo",
+                            "comunas": ["Coihaique", "Lago Verde", "Aisén", "Cisnes", "Guaitecas", "Cochrane", "O’Higgins", "Tortel", "Chile Chico", "Río Ibáñez"]
+                        },
+
+                        {
+                            "NombreRegion": "Región de Magallanes y de la AntárVca Chilena",
+                            "comunas": ["Punta Arenas", "Laguna Blanca", "Río Verde", "San Gregorio", "Cabo de Hornos (Ex Navarino)", "AntárVca", "Porvenir", "Primavera", "Timaukel", "Natales", "Torres del Paine"]
+                        },
+
+                        {
+                            "NombreRegion": "Región Metropolitana de Santiago",
+                            "comunas": ["Cerrillos", "Cerro Navia", "Conchalí", "El Bosque", "Estación Central", "Huechuraba", "Independencia", "La Cisterna", "La Florida", "La Granja", "La Pintana", "La Reina", "Las Condes", "Lo Barnechea", "Lo Espejo", "Lo Prado", "Macul", "Maipú", "Ñuñoa", "Pedro Aguirre Cerda", "Peñalolén", "Providencia", "Pudahuel", "Quilicura", "Quinta Normal", "Recoleta", "Renca", "San Joaquín", "San Miguel", "San Ramón", "Vitacura", "Puente Alto", "Pirque", "San José de Maipo", "Colina", "Lampa", "TilVl", "San Bernardo", "Buin", "Calera de Tango", "Paine", "Melipilla", "Alhué", "Curacaví", "María Pinto", "San Pedro", "Talagante", "El Monte", "Isla de Maipo", "Padre Hurtado", "Peñaflor"]
+                        }]
+                    };
+
+
+
+
+                    jQuery(document).ready(function () {
+
+                        var iRegion = 0;
+                        var htmlRegion = '<option value="sin-region">Seleccione región</option><option value="sin-region">--</option>';
+                        var htmlComunas = '<option value="sin-region">Seleccione comuna</option><option value="sin-region">--</option>';
+
+                        jQuery.each(RegionesYcomunas.regiones, function () {
+                            htmlRegion = htmlRegion + '<option value="' + RegionesYcomunas.regiones[iRegion].NombreRegion + '">' + RegionesYcomunas.regiones[iRegion].NombreRegion + '</option>';
+                            iRegion++;
+                        });
+
+                        jQuery('#regiones').html(htmlRegion);
+                        jQuery('#comunas').html(htmlComunas);
+
+                        jQuery('#regiones').change(function () {
+                            var iRegiones = 0;
+                            var valorRegion = jQuery(this).val();
+                            var htmlComuna = '<option value="sin-comuna">Seleccione comuna</option><option value="sin-comuna">--</option>';
+                            jQuery.each(RegionesYcomunas.regiones, function () {
+                                if (RegionesYcomunas.regiones[iRegiones].NombreRegion == valorRegion) {
+                                    var iComunas = 0;
+                                    jQuery.each(RegionesYcomunas.regiones[iRegiones].comunas, function () {
+                                        htmlComuna = htmlComuna + '<option value="' + RegionesYcomunas.regiones[iRegiones].comunas[iComunas] + '">' + RegionesYcomunas.regiones[iRegiones].comunas[iComunas] + '</option>';
+                                        iComunas++;
+                                    });
+                                }
+                                iRegiones++;
+                            });
+                            jQuery('#comunas').html(htmlComuna);
+                        });
+                        jQuery('#comunas').change(function () {
+                            if (jQuery(this).val() == 'sin-region') {
+                                alert('selecciones Región');
+                            } else if (jQuery(this).val() == 'sin-comuna') {
+                                alert('selecciones Comuna');
+                            }
+                        });
+                        jQuery('#regiones').change(function () {
+                            if (jQuery(this).val() == 'sin-region') {
+                                alert('selecciones Región');
+                            }
+                        });
+
+                    });
+//# sourceURL=pen.js
+                </script>
+
+
+
+
+
+
+
+
+
+                <hr>
+
+                <h1>Telefonos</h1>
+
+
+
+                <table class="table table-sm tablatelefonos">
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Codigo de Area</th>
+                            <th scope="col">Telefono Fijo</th>
+                            <th scope="col">Celular</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="codigoarea"></td>
+                            <td><input type="text" class="form-control" id="telefonofijo"></td>
+                            <td><input type="text" class="form-control" id="celular"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+
+
+
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1" name="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Aceptar Terminos y
+                        Condiciones</label>
+                </div>
+
+
+
+
+                <div class="text-center">
+                    <button type="submit" id="btn" class="btn btn-primary sumbit" value="SUBMIT">Enviar formulario</button>
+                </div>
+                <br>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.js"></script>
+
+
+   <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/localization/messages_es.js"></script>
+
+</body>
+
+</html>
