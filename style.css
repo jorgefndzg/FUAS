@@ -1,0 +1,168 @@
+#formulariologin{
+    margin-left: 20px;
+}
+
+.registroform{
+    box-shadow: 2px 2px 2px 2px;
+    margin-bottom: 40px;
+    background-color: rgba(0, 0, 0, 0.651);
+
+
+    color: white;
+}
+
+#formulario_registro{
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.logo{
+    height: 120px;
+    width: 120px;
+    float: right;
+
+}
+
+#logform{
+    padding-left: 0;
+    padding-right: 0;
+    width: 600px;
+}
+
+.container{
+    background-color: rgb(124, 124, 124);
+    margin-left: auto;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    box-shadow : 2px 2px 2px 2px;
+    background-color: rgba(0, 0, 0, 0.651);
+    color: white;
+}
+
+.textocont{
+    background-color: rgb(124, 124, 124);
+    margin-left: auto;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    box-shadow : 2px 2px 2px 2px;
+    background-color: rgba(0, 0, 0, 0.651);
+    color: white;
+}
+
+.error{
+    color: rgb(230, 98, 98);
+}
+
+.SL-Off{
+    background-color: rgb(124, 124, 124);
+    border-style: solid;
+    border-color: rgb(70, 70, 70);
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 150px;
+    margin-right: 150px;
+
+
+
+}
+
+.panel{
+    padding-bottom: 40px;
+    padding-top: 40px;
+    width: 3;
+}
+
+
+
+
+body hr{
+    background-color: white;
+}
+
+.frasehome{
+    color: white;
+    text-align: center;
+    background-color: rgba(105, 105, 105, 0.582) ;
+    margin-top: 500px;
+}
+
+.cf{
+    padding-bottom: 10px;
+}
+.SL-Off:hover{
+    background-color: rgb(71, 71, 71);
+    color: white;
+
+}
+.txt-acordion{
+    background-color: rgb(124, 124, 124);
+}
+
+*{
+    font-family:sans-serif;
+}
+
+.tituloform{
+    font-size: 55px;
+}
+
+html th{
+    color: white;
+}
+
+footer{
+    position:fixed;
+	bottom: 0;
+    padding-bottom: 0px;
+    text-decoration: tomato;
+    margin-left: auto;
+    color: white;
+    font-size: 30px;
+
+    
+        margin-top: 13%;
+        height: auto;
+        width: 100%;
+    
+        
+    
+}
+
+
+.site-info{
+    color: #ffffff;
+    background-color: #222222;
+    text-align: center;
+    font-size: 20px;
+}
+.inside-site-info{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1185px;
+}
+
+
+
+
+
+
+
+
+@media (max-height:0px){
+	footer { position: relative; }
+}
+
+body{
+    background-image: url(https://images.unsplash.com/photo-1581120083654-150513117cbf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1934&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+
